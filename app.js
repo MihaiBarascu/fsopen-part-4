@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(middleware.requestLogs);
 app.use("/api/blogs", router);
 
-logger.info(`trying to connect on ${config.MONGO_URI}`);
+logger.info(`connecting to ${config.MONGO_URI}`);
 
 mongoose
   .connect(config.MONGO_URI)
